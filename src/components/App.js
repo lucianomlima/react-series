@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 import PlacarContainer from './PlacarContainer';
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
+const data = {
+    match: {
+        place: 'Fonte Nova/BA',
+        date: '10/07/2016',
+        hour: '19h'
+    },
+    home: {
+        name: 'Bahia'
+    },
+    visitor: {
+        name: 'Vitória'
     }
+};
 
+export default class App extends Component {
     render() {
-        return <PlacarContainer />
+        return (
+            <PlacarContainer
+                match={data.match}
+                home={data.home}
+                visitor={data.visitor} />
+        )
     }
 }
