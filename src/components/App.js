@@ -18,10 +18,7 @@ const data = {
 export default class App extends Component {
     render() {
         return (
-            <PlacarContainer
-                match={data.match}
-                home={data.home}
-                visitor={data.visitor} />
+            <PlacarContainer {...data} />
         )
     }
 }

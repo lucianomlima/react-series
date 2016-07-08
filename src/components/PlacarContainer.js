@@ -25,25 +25,24 @@ export default class PlacarContainer extends Component {
 
     render() {
         const { match, home, visitor } = this.props;
+        const style = {float: "left", "marginLeft": "2em"};
+
         return (
             <div>
-                <div style={{float: "left", "marginLeft": "2em"}}>
+                <div style={style}>
                     <h3>Casa</h3>
                     <Time
-                        name={home.name}
+                        {...home}
                         goals={this.state.home_goals}
                         addGoal={this.addHomeGoal.bind(this)}/>
                 </div>
-                <div style={{float: "left", "marginLeft": "2em"}}>
-                    <Partida
-                        place={match.place}
-                        date={match.date}
-                        hour={match.hour} />
+                <div style={style}>
+                    <Partida {...match} />
                 </div>
-                <div style={{float: "left", "marginLeft": "2em"}}>
+                <div style={style}>
                     <h3>Visitante</h3>
                     <Time
-                        name={visitor.name}
+                        {...visitor}
                         goals={this.state.visitor_goals}
                         addGoal={this.addVisitorGoal.bind(this)}/>
                 </div>
