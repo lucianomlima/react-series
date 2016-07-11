@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 export default class Cursos extends Component {
     render () {
         return (
-            <h1 className="title">Conheça nossos cursos</h1>
+            <div>
+                <h2 className="title">Conheça nossos cursos</h2>
+                {this.props.children}
+            </div>
         )
     }
 }
