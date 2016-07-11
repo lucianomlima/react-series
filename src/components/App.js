@@ -12,7 +12,8 @@ const data = {
     },
     visitor: {
         name: 'Vitória'
-    }
+    },
+    weath: 'Nublado'
 };
 
 export default class App extends Component {

@@ -13,3 +13,13 @@ export default class Time extends Component {
         );
     }
 }
+
+Time.propTypes = {
+    name: React.PropTypes.string,
+    goals: React.PropTypes.number,
+    addGoal: React.PropTypes.func
+}
+
+Time.defaultProps = {
+    goals: 0
+}

@@ -15,3 +15,9 @@ export default class Partida extends Component {
         );
     }
 }
+
+Partida.propTypes = {
+    place: React.PropTypes.string,
+    date: React.PropTypes.string,
+    hour: React.PropTypes.string
+}

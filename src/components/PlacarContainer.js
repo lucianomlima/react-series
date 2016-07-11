@@ -24,7 +24,7 @@ export default class PlacarContainer extends Component {
     }
 
     render() {
-        const { match, home, visitor } = this.props;
+        const { match, home, visitor, weath } = this.props;
         const style = {float: "left", "marginLeft": "2em"};
 
         return (
@@ -38,6 +38,7 @@ export default class PlacarContainer extends Component {
                 </div>
                 <div style={style}>
                     <Partida {...match} />
+                    <div>Clima: {weath}</div>
                 </div>
                 <div style={style}>
                     <h3>Visitante</h3>
@@ -50,4 +51,23 @@ export default class PlacarContainer extends Component {
             </div>
         );
     }
+}
+
+PlacarContainer.propTypes = {
+    match: React.PropTypes.shape({
+        place: React.PropTypes.string,
+        date: React.PropTypes.string,
+        hour: React.PropTypes.string
+    }),
+    home: React.PropTypes.shape({
+        name: React.PropTypes.string
+    }),
+    visitor: React.PropTypes.shape({
+        name: React.PropTypes.string
+    }),
+    weath: React.PropTypes.string
+}
+
+PlacarContainer.defaultProps = {
+    weath: 'Ensolarado'
 }
